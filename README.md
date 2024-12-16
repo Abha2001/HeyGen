@@ -9,7 +9,7 @@ The `inputs/` folder contains some sample videos and reference images.
 
 ## Sample Output
 
-The `outputs/` folder contains the generated output for one of the input videos.
+The `outputs/` folder contains the generated output for one of the input videos (`inputs/RebelClips.mov` and `inputs/RebelImage.png`).
 
 This folder contains two types of video clips:
 
