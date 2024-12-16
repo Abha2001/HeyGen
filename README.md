@@ -17,10 +17,28 @@ This folder contains two types of video clips:
 
 2. `cropped_videos` - The clips from the original video with the target face cropped.
 
-It also has the `metadata.json` file with details of each clip.
+It also has the `metadata.json` file with details of each clip. including:
+1. The start and end timestamps of each clip in the original video.
+2. The filenames of the cropped/clipped video which is saved in the `output/cropped_videos` and `output/clipped_videos` folders respectively.
+3. The bounding box coordinates of the target face in each frame of the clip.
 
 ## Source Code
 The source code is present in the `src/` folder in `face_tracking.py`.
+
+## Dependencies
+```
+1. click==8.1.7
+2. cmake==3.31.2
+3. dlib==19.24.6
+4. face-recognition==1.3.0
+5. face-recognition-models==0.3.0
+6. numpy==2.2.0
+7. opencv-python==4.10.0.84
+8. pillow==11.0.0
+```
+
+To install, run - `pip intall -r requirements.txt`
+
 
 ## Run the code
 
@@ -36,6 +54,3 @@ The source code is present in the `src/` folder in `face_tracking.py`.
 
 1. The `face_recognition` library is used which is not able to detect faces in side profile. For example, when run with the `RossClip6.mov` and `RossImage.png` video and image, it detects only 2-3 faces in a group of 6-7 people seated around a round table.
 2. In the `RebelClips.mov` and `RebelImage.png` video and image, the target (the woman) is identified correctly but the other person's (the man's) face is not detected all the time. This is possibly due to the presence of sunglasses on the man.
-
-
-
